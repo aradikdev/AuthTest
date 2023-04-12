@@ -74,6 +74,8 @@ public class AccountController : Controller
                 Role role = _db.Roles.FirstOrDefault(r => r.Name == "user");
                 _db.Users.Add(new Models.User 
                         {
+                            Name = model.Name,
+                            Login = model.Login,
                             Email = model.Email, 
                             Password = model.Password,
                             RoleId = 2,
